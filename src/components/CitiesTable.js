@@ -120,7 +120,7 @@ function CitiesTable() {
             ))}
           </ul>
         )}
-        <Link to={`/weather/${searchTerm}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/weather/${searchTerm}`} style={{ textDecoration: 'none' }} target='_blank'>
           <SearchButton>Search</SearchButton>
         </Link>
         <h1>Or Select City</h1>
@@ -141,7 +141,7 @@ function CitiesTable() {
             {cities.map(city => (
               <tr key={city.geoname_id}>
                 <td>
-                  <Link to={`/weather/${city.name}`}>
+                  <Link to={`/weather/${city.name}`} target='_blank'>
                     {city.name}
                   </Link>
                 </td>
